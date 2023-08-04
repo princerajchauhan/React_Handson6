@@ -69,7 +69,7 @@ form {
 .btnStyle button {
     padding: 10px 80px;
     font-size: 25px;
-    border-radius: 40px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
