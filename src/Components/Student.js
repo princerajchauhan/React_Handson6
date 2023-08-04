@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import StoreData from './Store'
 import { Link, useNavigate } from 'react-router-dom'
 import './style.css'
@@ -9,8 +9,17 @@ const Student = () => {
 
     const navigate = useNavigate()
 
+    const [count, setCount] = useState(context.stdName.length)
+
+    // const deleteFun = (index) => {
+    //     context.stdName.splice(index, 1)
+    //     setCount(context.stdName.length)
+    // }
+    useEffect(() => {
+    }, [count])
+
     return (
-        <div style={{ width:'90%', margin: '50px auto' }}>
+        <div style={{ width: '90%', margin: '50px auto' }}>
             <div className="head">
                 <h1>Students Details</h1>
                 <button onClick={() => navigate("/students/addstudent")} id='headBtn'>Add New Student</button>
@@ -23,6 +32,7 @@ const Student = () => {
                         <th>Course</th>
                         <th>Batch</th>
                         <th>Change</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -35,6 +45,10 @@ const Student = () => {
                                     <td>{element.Course}</td>
                                     <td>{element.Batch}</td>
                                     <td><Link state={{ data: `${index}` }} to="/editstudent">Edit</Link></td>
+                                    <td onClick={() => {
+                                        context.stdName.splice(index, 1)
+                                        setCount(context.stdName.length)
+                                    }}><i className="fa fa-trash" style={{ cursor: 'pointer' }}></i></td>
                                 </tr>
                             )
                         })

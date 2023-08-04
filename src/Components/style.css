@@ -109,6 +109,9 @@ fieldset{
         padding: 5px 10px;
         font-size: 1rem;
     }
+    th,td{
+        padding: 10px;
+    }
 }
 
 @media screen and (max-width:480px) {
@@ -126,7 +129,7 @@ fieldset{
 
 @media screen and (max-width:450px) {
     th,td{
-        padding: 10px;
+        padding: 7px;
     }
 }
 
@@ -139,7 +142,7 @@ fieldset{
         font-size: 13px;
     }
     th,td{
-        padding: 8px;
+        padding: 5px;
     }
     th{
         font-size: 14px;
