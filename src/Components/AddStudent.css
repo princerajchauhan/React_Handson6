@@ -1,0 +1,182 @@
+form {
+    margin: 100px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    gap: 100px;
+    padding: 0 14%;
+    position: relative;
+}
+
+.inputBox {
+    position: relative;
+}
+
+.inputBox>input {
+    width: 100%;
+    padding: 20px 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(182, 82, 82);
+    background: transparent;
+    font-size: 1.2em;
+    outline: none;
+}
+
+.inputBox>label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 19px 10px;
+    pointer-events: none;
+    font-size: 1.2em;
+    color: rgb(97, 93, 93);
+    transition: 0.5s;
+}
+
+.inputBox input:valid~label,
+.inputBox input:focus~label {
+    color: blue;
+    transform: translateX(10px) translateY(-13px);
+    font-size: 1.1em;
+    padding: 0 10px;
+    background: linear-gradient(to top, #ffffff 0%, #ffffff 45%, rgba(0, 0, 0, 0)45%);
+}
+
+.inputBox input:valid,
+.inputBox input:focus {
+    border: 2px solid rgb(31, 119, 250);
+    background-color: white;
+
+}
+
+.inputBox input:not(:focus)~label {
+    color: rgb(97, 93, 93);
+}
+
+.inputBox input:not(:focus) {
+    border: 2px solid rgb(97, 93, 93);
+}
+
+.btnStyle {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    margin-top: -30px;
+    position: absolute;
+    right: 10%;
+    top: 330px;
+}
+
+.btnStyle button {
+    padding: 10px 80px;
+    font-size: 25px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+/* ********************* RESPONSIVE ********************** */
+
+@media screen and (max-width:1200px) {
+    form {
+        grid-template-columns: repeat(2, 350px);
+        padding: 0 10%;
+    }
+}
+
+@media screen and (max-width:950px) {
+    form {
+        grid-template-columns: repeat(2, 320px);
+        padding: 0 8%;
+    }
+}
+
+@media screen and (max-width:900px) {
+    form {
+        grid-template-columns: repeat(2, 300px);
+        padding: 0 8%;
+    }
+
+    .btnStyle button {
+        padding: 10px 70px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    form {
+        grid-template-columns: repeat(2, 270px);
+        padding: 0 8%;
+        gap: 70px 50px;
+    }
+
+    .btnStyle button {
+        padding: 10px 60px;
+    }
+}
+
+@media screen and (max-width:680px) {
+    form {
+        grid-template-columns: repeat(2, 48%);
+        padding: 0 8%;
+        gap: 50px 30px;
+    }
+
+    .btnStyle{
+        margin-top: -80px;
+    }
+
+    .btnStyle button {
+        padding: 8px 40px;
+    }
+}
+
+@media screen and (max-width:680px) {
+    .inputBox>label {
+        padding: 15px 10px;
+    }
+    .inputBox>input {
+        padding: 17px 10px;
+    }
+}
+
+@media screen and (max-width:680px) {
+    form{
+        margin-top: 70px;
+    }
+    .inputBox>label {
+        padding: 12px 10px;
+    }
+    .inputBox>input {
+        padding: 14px 10px;
+    }
+    .btnStyle{
+        margin-top: -110px;
+    }
+    .btnStyle button{
+        padding: 8px 30px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .inputBox>label {
+        padding: 13px 10px;
+    }
+    .inputBox>input {
+        padding: 11px 10px;
+    }
+    form{
+        grid-template-columns: 90%;
+        justify-content: center;
+        margin: 70px auto;
+        gap: 22px;
+    }
+    .btnStyle{
+        margin: -40px auto;
+        gap: 10px;
+        right: 15%;
+        /* transform: translateX(50%); */
+    }
+    .btnStyle button{
+        padding: 7px 30%;
+    }
+}

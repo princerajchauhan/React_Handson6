@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(rgb(140, 209, 220) 0%, rgb(232, 198, 198) 25%, rgb(229, 171, 171) 50%, rgb(232, 198, 198) 75%, rgba(140, 209, 220) 100%);
+    background-repeat: no-repeat;
+}

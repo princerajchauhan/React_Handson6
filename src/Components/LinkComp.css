@@ -1,0 +1,26 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    background-color: #090974;
+    padding: 0 12%;
+}
+
+.navStyle{
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+}
+
+.active{
+    color: #c27171;
+}
+
+/* **************************** RESPONSIVE ************************* */
+
+@media screen and (max-width:450px) {
+    .navStyle{
+        font-size: 1.1rem;
+    }
+}
