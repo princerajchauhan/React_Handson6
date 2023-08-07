@@ -44,11 +44,11 @@ const Student = () => {
                                     <td>{element.Age}</td>
                                     <td>{element.Course}</td>
                                     <td>{element.Batch}</td>
-                                    <td><Link state={{ data: `${index}` }} to="/editstudent">Edit</Link></td>
+                                    <td><Link state={{ data: `${index}` }} to="/editstudent" className='editStyle'>Edit</Link></td>
                                     <td onClick={() => {
                                         context.stdName.splice(index, 1)
                                         setCount(context.stdName.length)
-                                    }}><i className="fa fa-trash" style={{ cursor: 'pointer' }}></i></td>
+                                    }}><i className="fa fa-trash delStyle"></i></td>
                                 </tr>
                             )
                         })
